@@ -5,6 +5,8 @@ import java.util.Random;
 
 public class MinMaxAverage {
     public static void main(String[] args) {
+
+
         int[] arr = new int[10];
         Random rd = new Random();
         for (int i = 0; i < arr.length; i++) {
