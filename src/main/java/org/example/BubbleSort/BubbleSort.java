@@ -31,7 +31,7 @@ public class BubbleSort {
         System.out.println("Затраченное время на сортировку: " + (System.currentTimeMillis() - time));
     }
 
-    public static void swap(int[] arr1, int int1, int int2) {
+    private static void swap(int[] arr1, int int1, int int2) {
         int temp = arr1[int1];
         arr1[int1] = arr1[int2];
         arr1[int2] = temp;
