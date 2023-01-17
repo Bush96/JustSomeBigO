@@ -23,11 +23,11 @@ public class SelectionSort {
         int j = 0;
         for (int i = 0; i < array1.length - 1; i++) {
             for (j = i + 1; j < array1.length; j++) {
-                int min = i;
+                int min = i;                     //эта переменная нужна нам для того чтобы свапать значения в случаи необходимоти
                 if (array1[j] < array1[i]) {
                     min = j;
                 }
-                if (min != i) {
+                if (min != i) {                      //эта часто сравниваем перемещающийся указатель джи с I(который всегда является гоовой неотсортированной части массива)
                     int a = array1[i];
                     array1[i] = array1[j];
                     array1[j] = a;
