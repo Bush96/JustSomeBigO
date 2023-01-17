@@ -16,12 +16,16 @@ public class BubbleSort {
             array[i] = rd.nextInt(101);
             System.out.print(array[i] + " ");
         }
+
         boolean needIteration = true;
         while (needIteration) {
-            needIteration = false;
+            needIteration = false;          //этот фолс сработает когда в очередной раз мы будем итерироваться п омассиву и ни разу не сработает условие ифа, т.е. нид итератион так и останется фолсам
             for (int i = 1; i < array.length; i++) {
                 if (array[i] < array[i - 1]) {
-                    swap(array, i, i - 1);
+                    int temp = array[i-1];
+                    array[i-1] = array[i];
+                    array[i] = temp;
+//                    swap(array, i, i - 1);
                     needIteration = true;
                 }
             }
@@ -31,9 +35,9 @@ public class BubbleSort {
         System.out.println("Затраченное время на сортировку: " + (System.currentTimeMillis() - time));
     }
 
-    private static void swap(int[] arr1, int int1, int int2) {
-        int temp = arr1[int1];
-        arr1[int1] = arr1[int2];
-        arr1[int2] = temp;
-    }
+//    private static void swap(int[] arr1, int int1, int int2) {
+//        int temp = arr1[int1];
+//        arr1[int1] = arr1[int2];
+//        arr1[int2] = temp;
+//    }
 }
