@@ -22,8 +22,8 @@ public class BubbleSort {
             needIteration = false;          //этот фолс сработает когда в очередной раз мы будем итерироваться п омассиву и ни разу не сработает условие ифа, т.е. нид итератион так и останется фолсам
             for (int i = 1; i < array.length; i++) {
                 if (array[i] < array[i - 1]) {
-                    int temp = array[i-1];
-                    array[i-1] = array[i];
+                    int temp = array[i - 1];
+                    array[i - 1] = array[i];
                     array[i] = temp;
 //                    swap(array, i, i - 1);
                     needIteration = true;
@@ -33,6 +33,7 @@ public class BubbleSort {
         System.out.println();
         System.out.println(Arrays.toString(array));
         System.out.println("Затраченное время на сортировку: " + (System.currentTimeMillis() - time));
+
     }
 
 //    private static void swap(int[] arr1, int int1, int int2) {
