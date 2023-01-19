@@ -46,9 +46,22 @@ public class MinMaxAverage {
         }
         System.out.println("Average:  " + average);
 
+//////////////////findSimpleNumber///////////////////
+        for(int i = 2; i <= 100; i ++){
+            boolean isPrime = true;          //переменная для фиксирования и печати результта
 
+            for(int j = 2; j < i; j++){
+                if(i % j == 0){                  //просто число делится без остатка только на себя
+                    isPrime = false;             //если какое то число делится без остатка на предыдушие себе, значит обрываем цикл оно не подходит
+                    break;
+                }
+            }
 
-    }
+            if(isPrime){                     //если цикл не обрывался отпечатываем результат
+                System.out.println(i);
+            }
+
+    }}
 
     //////////////////DeletingElements///////////////////
     public static int[] removeElement(int[] myArray, int num) {
